@@ -147,9 +147,8 @@ IAP390,2025-07-08 13:30:00,2025-07-08 16:55:00,IAP  390 - 01,Social and Behavior
 - **Library Versions**: Use `pip show beautifulsoup4 lxml` to confirm you have the latest versions.
 
 ## Next Steps
-- **Calendar Import**: Import the CSV intoCSV/iCal Converter.
+- **Calendar Import**: Import the CSV to **CSV/iCal Converter**.
 
-For further assistance, contact the script developer or Stony Brook
 # CSV/iCal Converter
 
 [![PyPI](https://img.shields.io/pypi/v/csv-ical)](https://pypi.org/project/csv-ical/)
