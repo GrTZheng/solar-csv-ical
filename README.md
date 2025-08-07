@@ -171,7 +171,7 @@ pip install csv-ical
 
 ## Usage
 
-See the example files.
+See the example folder.
 
 ## Development
 
@@ -182,3 +182,8 @@ mypy . --strict --ignore-missing-imports
 coverage run -m unittest
 coverage report -m
 ```
+
+# Final Steps
+- Get the [ICS To Calendar](https://www.icloud.com/shortcuts/76e984f27b194fbf9c81044bf8bd0109) shortcut.
+- Send the ICS file to your iPhone.
+- Open it and click on the share icon and select **ICS To Calendar**.
