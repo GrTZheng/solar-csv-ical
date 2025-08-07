@@ -1,6 +1,7 @@
 # Extracting Course Schedules from Stony Brook SOLAR to CSV
 
-This guide explains how to extract course schedule data from Stony Brook University's SOLAR system, available in XML (List View) or HTML (Weekly Calendar View) formats, and convert it into a CSV file for use in calendar applications or analysis. The provided Python scripts parse the data, generate recurring class sessions, and output them to a CSV file with columns for course code, start time, end time, notes, and location.
+This repository is a fork of [csv-ical](https://github.com/albertyw/csv-ical), licensed under MIT License. 
+This guide explains how to extract course schedule data from Stony Brook University's SOLAR system, available in XML or HTML formats, and convert it into a CSV file for use in calendar applications or analysis. The provided Python scripts parse the data, generate recurring class sessions, and output them to a CSV file with columns for course code, start time, end time, notes, and location.
 
 ## Prerequisites
 
@@ -19,7 +20,7 @@ To run the scripts, ensure you have the following installed:
 
 Two Python scripts are provided to handle different input formats:
 1. **XML to CSV (List View)**: Parses an XML file containing List View HTML, extracting course details like course code, instructor, location, dates, and schedule.
-2. **HTML to CSV (Weekly Calendar View)**: Parses an HTML file from the Weekly Calendar View, extracting course data from a table grid.
+2. **HTML to CSV (Weekly Calendar View)**: Parses an HTML file from the List View, extracting course data from a table grid.
 
 Both scripts output a CSV file with the following columns:
 - **Course Code**: E.g., `AMS301`.
@@ -28,7 +29,7 @@ Both scripts output a CSV file with the following columns:
 - **Notes**: Course title and instructor (if available).
 - **Location**: Classroom or `ONLINE`.
 
-## XML to CSV Script (List View)
+## XML to CSV Script
 
 ### Purpose
 This script processes an XML file from SOLAR’s List View, which contains course details in a structured table with `<td class="PAGROUPDIVIDER PSLEFTCORNER">` for course titles and specific IDs for details (e.g., `DERIVED_CLS_DTL_SSR_INSTR_LONG$0`).
@@ -88,7 +89,7 @@ ISE391,2025-08-25 20:00:00,2025-08-25 21:20:00,ISE 391 - Topics in Information S
     Ensure the file is saved as UTF-8 without BOM.
 - **DeprecationWarning**: If you see a warning about testing an element’s truth value, the script has been updated to use `page_container is None` for compatibility.
 
-## HTML to CSV Script (Weekly Calendar View)
+## HTML to CSV Script
 
 ### Purpose
 This script processes an HTML file from SOLAR’s Weekly Calendar View, which displays courses in a table grid (`<table id="WEEKLY_SCHED_HTMLAREA">`). It extracts course data from cells with a specific background color.
